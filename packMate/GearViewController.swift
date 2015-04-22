@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  packMate
 //
 //  Created by Brad Allen on 4/22/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class GearViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
