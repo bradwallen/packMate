@@ -13,7 +13,8 @@ class PacksViewController: UIViewController, UITableViewDataSource {
     var userPacks = [
         Packs(name: "Day Pack"),
         Packs(name: "Weekend Pack"),
-        Packs(name: "5 Day Pack") ]
+        Packs(name: "5 Day Pack"),
+        Packs(name: "Cold Weather")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
