@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Packs-->
@@ -18,19 +17,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cY9-vm-19g">
-                                <rect key="frame" x="0.0" y="82" width="610" height="469"/>
+                                <rect key="frame" x="0.0" y="82" width="600" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="469" id="fYg-oy-C5r"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="dUe-Jn-u0r"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Packs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbI-dz-Ybh">
+                                <rect key="frame" x="284" y="28" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cY9-vm-19g" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="GpA-Vd-iZs"/>
-                            <constraint firstItem="cY9-vm-19g" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ZcR-sM-eGd"/>
-                            <constraint firstItem="cY9-vm-19g" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="62" id="axm-jt-OAK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cY9-vm-19g" secondAttribute="trailing" constant="-26" id="eKy-cr-9ET"/>
+                            <constraint firstItem="cY9-vm-19g" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="ASK-Dn-bKu"/>
+                            <constraint firstAttribute="trailing" secondItem="cY9-vm-19g" secondAttribute="trailing" id="PND-Zu-P2Z"/>
+                            <constraint firstItem="cY9-vm-19g" firstAttribute="top" secondItem="YbI-dz-Ybh" secondAttribute="bottom" constant="33" id="VIJ-90-OGN"/>
+                            <constraint firstItem="cY9-vm-19g" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="qNg-Yj-oUy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Packs" image="first" id="acW-dT-cKf"/>
@@ -50,7 +58,30 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fwm-Wu-ypR">
+                                <rect key="frame" x="0.0" y="82" width="600" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="469" id="3lh-pf-eu2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="uwG-XH-mrw"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cY-xl-us5">
+                                <rect key="frame" x="279" y="28" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fwm-Wu-ypR" secondAttribute="trailing" id="6cK-tS-T7u"/>
+                            <constraint firstItem="Fwm-Wu-ypR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="BrM-LQ-2zV"/>
+                            <constraint firstItem="Fwm-Wu-ypR" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="KsI-Gs-MPO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gear" image="second" id="cPa-gy-q4n"/>
                 </viewController>
