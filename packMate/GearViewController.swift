@@ -45,13 +45,34 @@ class GearViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         let gear : Gear = userGear[indexPath.row]
         
         cell.textLabel?.text = gear.name
+        cell.detailTextLabel?.text = "item weight"
         
         return cell
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

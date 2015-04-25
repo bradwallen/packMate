@@ -36,12 +36,13 @@ class PacksViewController: UIViewController, UITableViewDataSource {
         return userPacks.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell  {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         let packs : Packs = userPacks[indexPath.row]
         
         cell.textLabel?.text = packs.name
+        cell.detailTextLabel?.text = "pack weight"
         
         return cell
     }
