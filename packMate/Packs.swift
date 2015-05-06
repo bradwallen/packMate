@@ -9,5 +9,6 @@
 import Foundation
 
 struct Packs {
-    let name : String
+    var name : String
+    var weight: Int
 }

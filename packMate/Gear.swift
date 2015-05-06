@@ -9,5 +9,6 @@
 import Foundation
 
 struct Gear {
-    let name : String
+    var name : String
+    var weight: Int
 }

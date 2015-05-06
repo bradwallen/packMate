@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2922F481AFAAAD600121F02 /* GearDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */; };
+		A2922F4A1AFAAAF200121F02 /* PackContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2922F491AFAAAF200121F02 /* PackContentsViewController.swift */; };
 		A2B731641AE81C9B002B326D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731631AE81C9B002B326D /* AppDelegate.swift */; };
 		A2B731661AE81C9B002B326D /* PacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731651AE81C9B002B326D /* PacksViewController.swift */; };
 		A2B731681AE81C9B002B326D /* GearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731671AE81C9B002B326D /* GearViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GearDetailsViewController.swift; path = ../GearDetailsViewController.swift; sourceTree = "<group>"; };
+		A2922F491AFAAAF200121F02 /* PackContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PackContentsViewController.swift; path = ../PackContentsViewController.swift; sourceTree = "<group>"; };
 		A2B7315E1AE81C9B002B326D /* packMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B731621AE81C9B002B326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2B731631AE81C9B002B326D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 			children = (
 				A2B731631AE81C9B002B326D /* AppDelegate.swift */,
 				A2B731651AE81C9B002B326D /* PacksViewController.swift */,
+				A2922F491AFAAAF200121F02 /* PackContentsViewController.swift */,
 				A2B731671AE81C9B002B326D /* GearViewController.swift */,
+				A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */,
 				A2B731691AE81C9B002B326D /* Main.storyboard */,
 				A2B731851AE828CF002B326D /* Packs.swift */,
 				A2B731871AE828E1002B326D /* Gear.swift */,
@@ -224,7 +230,9 @@
 				A2B731861AE828CF002B326D /* Packs.swift in Sources */,
 				A2B731881AE828E1002B326D /* Gear.swift in Sources */,
 				A2B731681AE81C9B002B326D /* GearViewController.swift in Sources */,
+				A2922F4A1AFAAAF200121F02 /* PackContentsViewController.swift in Sources */,
 				A2B731641AE81C9B002B326D /* AppDelegate.swift in Sources */,
+				A2922F481AFAAAD600121F02 /* GearDetailsViewController.swift in Sources */,
 				A2B731661AE81C9B002B326D /* PacksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +431,7 @@
 				A2B731811AE81C9B002B326D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2B731821AE81C9B002B326D /* Build configuration list for PBXNativeTarget "packMateTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +440,7 @@
 				A2B731841AE81C9B002B326D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
