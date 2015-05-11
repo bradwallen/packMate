@@ -12,6 +12,7 @@ var gearMgr:GearManager = GearManager()
 
 struct gear {
     var name:String?
+    var desc:String?
     var weight:String?
 }
 
@@ -19,8 +20,8 @@ class GearManager: NSObject{
     
     var gearItem = [gear]()
     
-    func addGearItem(name: String, weight: String){
-        gearItem.append(gear(name: name, weight: weight))
+    func addGearItem(name: String, desc: String, weight: String){
+        gearItem.append(gear(name: name, desc: desc, weight: weight))
     }
 
 }

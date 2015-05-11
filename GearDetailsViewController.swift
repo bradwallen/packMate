@@ -11,6 +11,7 @@ import UIKit
 class GearDetailsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtDesc: UITextField!
     @IBOutlet weak var txtWeight: UITextField!
     
 
@@ -28,9 +29,10 @@ class GearDetailsViewController: UIViewController, UITextFieldDelegate {
     
     //Events
     @IBAction func btnAddNewGear(sender: UIButton) {
-        gearMgr.addGearItem(txtName.text, weight: txtWeight.text);
+        gearMgr.addGearItem(txtName.text, desc: txtDesc.text, weight: txtWeight.text);
         self.view.endEditing(true)
         txtName.text = ""
+        txtDesc.text = ""
         txtWeight.text = ""
     }
     
