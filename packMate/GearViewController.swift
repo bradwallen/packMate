@@ -8,46 +8,45 @@
 
 import UIKit
 
-class GearViewController: UIViewController, UITableViewDataSource {
+class GearViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var gear = [Gear]()
+    @IBOutlet weak var tblGearList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-    var newGear = Gear(name: "knife", weight: 2)
-        gear.append(newGear)
-        
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
+    //Returning to view
+    override func viewWillAppear(animated: Bool) {
+        tblGearList.reloadData();
+    }
+    
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gear.count
+        return gearMgr.gearItem.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        var newGear = gear[indexPath.row]
-        cell.textLabel?.text = newGear.name
-        cell.detailTextLabel?.text = "item weight"
+        cell.textLabel?.text = gearMgr.gearItem[indexPath.row].name
+        cell.detailTextLabel?.text = gearMgr.gearItem[indexPath.row].weight
         
         //Put the picture next to each gear item.
         var gearImage = UIImage(named: "PlaceHolderImage")
         cell.imageView?.image = gearImage
         
         return cell
-    }
-    
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

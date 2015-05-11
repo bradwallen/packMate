@@ -8,10 +8,13 @@
 
 import UIKit
 
-class GearDetailsViewController: UIViewController {
-    
-    var currentGearItem : Gear?
+class GearDetailsViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtWeight: UITextField!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +26,29 @@ class GearDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Events
+    @IBAction func btnAddNewGear(sender: UIButton) {
+        gearMgr.addGearItem(txtName.text, weight: txtWeight.text);
+        self.view.endEditing(true)
+        txtName.text = ""
+        txtWeight.text = ""
+    }
+    
+    
+    //iOS Touch Functions
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder();
+        return true
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

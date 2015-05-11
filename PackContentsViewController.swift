@@ -10,11 +10,10 @@ import UIKit
 
 class PackContentsViewController: UIViewController {
     
-    var currentPack : Packs?
+    
+    @IBOutlet weak var gearList: UILabel!
     
     
-    @IBOutlet var currentPackContents: UIView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -16,8 +16,8 @@
 		A2B7316D1AE81C9B002B326D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B7316C1AE81C9B002B326D /* Images.xcassets */; };
 		A2B731701AE81C9B002B326D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B7316E1AE81C9B002B326D /* LaunchScreen.xib */; };
 		A2B7317C1AE81C9B002B326D /* packMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B7317B1AE81C9B002B326D /* packMateTests.swift */; };
-		A2B731861AE828CF002B326D /* Packs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731851AE828CF002B326D /* Packs.swift */; };
-		A2B731881AE828E1002B326D /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731871AE828E1002B326D /* Gear.swift */; };
+		A2B731861AE828CF002B326D /* PackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731851AE828CF002B326D /* PackManager.swift */; };
+		A2B731881AE828E1002B326D /* GearManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B731871AE828E1002B326D /* GearManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GearDetailsViewController.swift; path = ../GearDetailsViewController.swift; sourceTree = "<group>"; };
 		A2922F491AFAAAF200121F02 /* PackContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PackContentsViewController.swift; path = ../PackContentsViewController.swift; sourceTree = "<group>"; };
+		A2922F7B1B01144200121F02 /* Scratchpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratchpad.playground; sourceTree = "<group>"; };
 		A2B7315E1AE81C9B002B326D /* packMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B731621AE81C9B002B326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2B731631AE81C9B002B326D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +45,8 @@
 		A2B731751AE81C9B002B326D /* packMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = packMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B7317A1AE81C9B002B326D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2B7317B1AE81C9B002B326D /* packMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packMateTests.swift; sourceTree = "<group>"; };
-		A2B731851AE828CF002B326D /* Packs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Packs.swift; sourceTree = "<group>"; };
-		A2B731871AE828E1002B326D /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
+		A2B731851AE828CF002B326D /* PackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackManager.swift; sourceTree = "<group>"; };
+		A2B731871AE828E1002B326D /* GearManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GearManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +92,14 @@
 				A2B731651AE81C9B002B326D /* PacksViewController.swift */,
 				A2922F491AFAAAF200121F02 /* PackContentsViewController.swift */,
 				A2B731671AE81C9B002B326D /* GearViewController.swift */,
-				A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */,
 				A2B731691AE81C9B002B326D /* Main.storyboard */,
-				A2B731851AE828CF002B326D /* Packs.swift */,
-				A2B731871AE828E1002B326D /* Gear.swift */,
+				A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */,
+				A2B731851AE828CF002B326D /* PackManager.swift */,
+				A2B731871AE828E1002B326D /* GearManager.swift */,
 				A2B7316C1AE81C9B002B326D /* Images.xcassets */,
 				A2B7316E1AE81C9B002B326D /* LaunchScreen.xib */,
 				A2B731611AE81C9B002B326D /* Supporting Files */,
+				A2922F7B1B01144200121F02 /* Scratchpad.playground */,
 			);
 			path = packMate;
 			sourceTree = "<group>";
@@ -227,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B731861AE828CF002B326D /* Packs.swift in Sources */,
-				A2B731881AE828E1002B326D /* Gear.swift in Sources */,
+				A2B731861AE828CF002B326D /* PackManager.swift in Sources */,
+				A2B731881AE828E1002B326D /* GearManager.swift in Sources */,
 				A2B731681AE81C9B002B326D /* GearViewController.swift in Sources */,
 				A2922F4A1AFAAAF200121F02 /* PackContentsViewController.swift in Sources */,
 				A2B731641AE81C9B002B326D /* AppDelegate.swift in Sources */,

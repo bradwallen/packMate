@@ -8,16 +8,12 @@
 
 import UIKit
 
-class PacksViewController: UIViewController, UITableViewDataSource {
+class PacksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var packs = [Packs]()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-     var newPacks = Packs(name: "Day Pack", weight: 5)
-        packs.append(newPacks)
         
     }
    
@@ -25,16 +21,17 @@ class PacksViewController: UIViewController, UITableViewDataSource {
         return 1
     }
 
+    
+    //UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return packs.count
+        return packMgr.packs.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell  {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        var newPacks = packs[indexPath.row]
-        cell.textLabel?.text = newPacks.name
-        cell.detailTextLabel?.text = "pack weight"
+        cell.textLabel?.text = packMgr.packs[indexPath.row].name
+        cell.detailTextLabel?.text = packMgr.packs[indexPath.row].weight
         
         return cell
     }
@@ -48,6 +45,9 @@ class PacksViewController: UIViewController, UITableViewDataSource {
 
 }
 
+
+
+//(name: "Day Pack", weight: 5)
 
 
 
