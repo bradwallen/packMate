@@ -10,19 +10,34 @@ import UIKit
 
 class PacksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-   
+    @IBOutlet weak var tblPackList: UITableViewCell!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-   
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
     
-    //UITableViewDataSource
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //Returning to view
+    override func viewWillAppear(animated: Bool) {
+        tblPackList.reloadData()
+    }
+    
+    
+    //Hadle deleting from the table
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.Delete){
+            packMgr.packs.removeAtIndex(indexPath.row)
+            tblPackList.reloadData()
+        }
+    }
+    
+    //Data source for the table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return packMgr.packs.count
     }
@@ -35,23 +50,5 @@ class PacksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
-    
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 }
-
-
-
-//(name: "Day Pack", weight: 5)
-
-
-
-//Packs(name: "Day Pack"),
-//Packs(name: "Weekend Pack"),
-//Packs(name: "5 Day Pack"),
-//Packs(name: "Cold Weather")]

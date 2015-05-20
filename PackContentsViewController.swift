@@ -9,10 +9,10 @@
 import UIKit
 
 class PackContentsViewController: UIViewController {
-    
-    
-    @IBOutlet weak var gearList: UILabel!
-    
+   
+    //reference the text fields
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtDesc: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,21 @@ class PackContentsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Events
+    @IBAction func btnCreateNewPack(sender: AnyObject) {
+        packMgr.addPack(txtName, weight: txtDesc)
+        
+        //when Add Gear button is touched, end editing
+        self.view.endEditing(true)
+        
+        //clear out the text fields once the button is pressed
+        txtName.text = ""
+        txtDesc.text = ""
+    }
+    
+    }
+
     
 
     /*

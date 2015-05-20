@@ -59,22 +59,6 @@ class GearViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
 
-//    var userGear = [
-//        Gear(name: "knife"),
-//        Gear(name: "sleeping bag"),
-//        Gear(name: "canteen"),
-//        Gear(name: "flint"),
-//        Gear(name: "tent"),
-//        Gear(name: "headlamp"),
-//        Gear(name: "small dry bag"),
-//        Gear(name: "medium dry bag"),
-//        Gear(name: "tent stakes"),
-//        Gear(name: "AAA batteries"),
-//        Gear(name: "socks"),
-//        Gear(name: "water filter") ]
-
-
-
 
 
 

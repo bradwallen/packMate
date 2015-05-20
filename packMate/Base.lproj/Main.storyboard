@@ -39,9 +39,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="QOC-7k-jPD" kind="push" id="x6p-aL-jJc"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -59,7 +56,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hkS-Gu-Qk8"/>
+                    <navigationItem key="navigationItem" id="hkS-Gu-Qk8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RCJ-in-6Zh">
+                            <connections>
+                                <segue destination="QOC-7k-jPD" kind="push" id="cLt-ep-DBR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tblPackList" destination="XPh-tb-5x1" id="jwP-nt-lhB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,25 +79,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of stuff in a pack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LdQ-Qi-Yfk">
-                                <rect key="frame" x="80" y="273" width="160" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new Pack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LdQ-Qi-Yfk">
+                                <rect key="frame" x="88" y="80" width="145" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" id="UKH-oq-yT0">
+                                <rect key="frame" x="16" y="109" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" clearButtonMode="whileEditing" id="5Yp-sN-L12">
+                                <rect key="frame" x="16" y="147" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ah2-mr-n2u">
+                                <rect key="frame" x="258" y="185" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCreateNewPack:" destination="QOC-7k-jPD" eventType="touchUpInside" id="m3B-tc-URY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="q8f-MR-adq"/>
                     <connections>
-                        <outlet property="gearList" destination="LdQ-Qi-Yfk" id="RHR-2j-YVd"/>
                         <outlet property="packContents" destination="6Qd-pS-mKH" id="oMu-Dp-vcx"/>
+                        <outlet property="txtDesc" destination="5Yp-sN-L12" id="aG0-Co-f9g"/>
+                        <outlet property="txtName" destination="UKH-oq-yT0" id="hSx-FY-Ot6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGE-G7-Fmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827.73333333333335" y="-287.78666666666669"/>
+            <point key="canvasLocation" x="827" y="-288"/>
         </scene>
         <!--Gear View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -149,7 +178,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xv6-73-9BC">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="LMo-lE-0dd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="LMo-lE-0dd">
                             <connections>
                                 <segue destination="CGV-Pl-w6Z" kind="push" id="l7J-du-t4O"/>
                             </connections>
