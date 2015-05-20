@@ -25,13 +25,19 @@ class GearViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //Returning to view
     override func viewWillAppear(animated: Bool) {
-        tblGearList.reloadData();
+        tblGearList.reloadData()
     }
     
-//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
+
+    //Hadle deleting from the table
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.Delete){
+            gearMgr.gearItem.removeAtIndex(indexPath.row)
+            tblGearList.reloadData()
+        }
+    }
     
+    //Data source for the table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gearMgr.gearItem.count
     }

@@ -89,13 +89,13 @@
 			isa = PBXGroup;
 			children = (
 				A2B731631AE81C9B002B326D /* AppDelegate.swift */,
+				A2B731851AE828CF002B326D /* PackManager.swift */,
 				A2B731651AE81C9B002B326D /* PacksViewController.swift */,
 				A2922F491AFAAAF200121F02 /* PackContentsViewController.swift */,
-				A2B731671AE81C9B002B326D /* GearViewController.swift */,
-				A2B731691AE81C9B002B326D /* Main.storyboard */,
-				A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */,
-				A2B731851AE828CF002B326D /* PackManager.swift */,
 				A2B731871AE828E1002B326D /* GearManager.swift */,
+				A2B731671AE81C9B002B326D /* GearViewController.swift */,
+				A2922F471AFAAAD600121F02 /* GearDetailsViewController.swift */,
+				A2B731691AE81C9B002B326D /* Main.storyboard */,
 				A2B7316C1AE81C9B002B326D /* Images.xcassets */,
 				A2B7316E1AE81C9B002B326D /* LaunchScreen.xib */,
 				A2B731611AE81C9B002B326D /* Supporting Files */,

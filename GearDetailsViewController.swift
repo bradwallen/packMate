@@ -10,6 +10,7 @@ import UIKit
 
 class GearDetailsViewController: UIViewController, UITextFieldDelegate {
 
+    //reference the text fields
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtDesc: UITextField!
     @IBOutlet weak var txtWeight: UITextField!
@@ -30,7 +31,11 @@ class GearDetailsViewController: UIViewController, UITextFieldDelegate {
     //Events
     @IBAction func btnAddNewGear(sender: UIButton) {
         gearMgr.addGearItem(txtName.text, desc: txtDesc.text, weight: txtWeight.text);
+        
+        //when Add Gear button is touched, end editing
         self.view.endEditing(true)
+        
+        //clear out the text fields once the button is pressed
         txtName.text = ""
         txtDesc.text = ""
         txtWeight.text = ""
@@ -44,7 +49,7 @@ class GearDetailsViewController: UIViewController, UITextFieldDelegate {
     
 
     func textFieldShouldReturn(textField: UITextField) -> Bool{
-        textField.resignFirstResponder();
+        textField.resignFirstResponder()
         return true
     }
     
