@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  PacksViewController.swift
 //  packMate
 //
 //  Created by Brad Allen on 4/22/15.
@@ -10,7 +10,7 @@ import UIKit
 
 class PacksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tblPackList: UITableViewCell!
+    @IBOutlet weak var tblPackList: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
